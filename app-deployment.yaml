@@ -14,9 +14,11 @@ spec:
     spec:
       containers:
       - name: app-container
-        image: app:latest
+        image: mmkorshunova/app:latest
         ports:
         - containerPort: 5000
+          protocol: TCP
+          name: http
 ---
 apiVersion: v1
 kind: Service
@@ -29,3 +31,4 @@ spec:
     - protocol: TCP
       port: 5000
       targetPort: 5000
+  type: LoadBalancer

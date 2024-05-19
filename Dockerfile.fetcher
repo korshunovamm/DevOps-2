@@ -1,0 +1,9 @@
+FROM python:3.10
+
+WORKDIR /app
+
+COPY fetch_statistics.py /app
+
+RUN pip install requests
+
+CMD ["python3", "fetch_statistics.py"]

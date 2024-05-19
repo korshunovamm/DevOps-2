@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fetcher-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fetcher
+  template:
+    metadata:
+      labels:
+        app: fetcher
+    spec:
+      containers:
+      - name: fetcher-container
+        image: fetcher:latest

@@ -1,7 +1,7 @@
 import requests
 import time
 
-url = 'http://127.0.0.1:5000/statistics'
+url = 'http://app:5000/statistics'
 while True:
     try:
         response = requests.get(url)

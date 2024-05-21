@@ -27,7 +27,7 @@ http://127.0.0.1:36153/time
 http://127.0.0.1:36153/statistics
 ```
 
-6. Получить файл statistics.txt через обращение к поду деплоймента fetcher-deployment:
+6. Получить файл statistics.txt через обращение к поду деплоймента statistics-fetcher:
 ```
-kubectl cp fetcher-deployment-xxxxxxxxxx-xxxxx:statistics.txt ./statistics.txt
+kubectl cp statistics-fetcher-xxxxxxxxxx-xxxxx:statistics.txt ./statistics.txt
 ```

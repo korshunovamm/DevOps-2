@@ -1,15 +1,19 @@
 from flask import Flask, jsonify
 from datetime import datetime
+import requests
+
 
 app = Flask(__name__)
 time_request_count = 0
-
+url = "http://worldtimeapi.org/api/timezone/Europe/Moscow"
 
 @app.route('/time', methods=['GET'])
 def get_time():
     global time_request_count
     time_request_count += 1
-    return jsonify({'time': datetime.now().isoformat()})
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.json()['datetime']
 
 
 @app.route('/statistics', methods=['GET'])

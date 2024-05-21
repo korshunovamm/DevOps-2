@@ -2,8 +2,6 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: exporter-servicemonitor
-  labels:
-    team: frontend
 spec:
   selector:
     matchLabels:

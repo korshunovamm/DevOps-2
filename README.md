@@ -31,3 +31,7 @@ http://127.0.0.1:36153/statistics
 ```
 kubectl cp statistics-fetcher-xxxxxxxxxx-xxxxx:statistics.txt ./statistics.txt
 ```
+7. Получить метрики:  
+```
+minikube service exporter-service  
+```

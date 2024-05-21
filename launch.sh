@@ -1,7 +1,7 @@
 #!/bin/bash
 
-kubectl create -f app-deployment.yaml
-kubectl create -f fetcher-deployment.yaml
-kubectl create -f cronjob.yaml
+kubectl create -f deployments/app-deployment.yaml
+kubectl create -f deployments/fetcher-deployment.yaml
+kubectl create -f deployments/cronjob.yaml
 
 

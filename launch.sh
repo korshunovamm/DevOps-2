@@ -6,7 +6,6 @@ istioctl install -y --set profile=demo --set meshConfig.outboundTrafficPolicy.mo
 kubectl label namespace default istio-injection=enabled
 
 kubectl create -f deployments/app-deployment.yaml
-kubectl create -f deployments/fetcher-deployment.yaml
 kubectl create -f deployments/cronjob.yaml
 kubectl create -f deployments/gateway.yaml
 kubectl create -f deployments/virtual-service.yaml
